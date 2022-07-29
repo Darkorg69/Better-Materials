@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "#/#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:emerald"
+    },
+    "/": {
+      "item": "minecraft:leather_horse_armor"
+    }
+  },
+  "result": {
+    "item": "bettermaterials:emerald_horse_armor"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:saddle"
+    ]
+  },
+  "criteria": {
+    "has_": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:saddle"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:saddle"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_",
+      "has_the_recipe"
+    ]
+  ]
+}

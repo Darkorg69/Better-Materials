@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "[39,)"
+license = "MIT License"
+issueTrackerURL = "https://github.com/darkorg69/bettermaterials/issues"
+
+[[mods]]
+modId = "bettermaterials"
+version = "1.18-1.0.0"
+displayName = "bettermaterials"
+#updateJSONURL=""
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/bettermaterials"
+logoFile = "bettermaterials.png"
+credits = "Thanks for this mod goes to Java and the Forge Team"
+authors = "Darkorg"
+description = '''A minecraft mod, expanding upon vanilla resources, making them more useful and realistic.'''
+
+[[dependencies.bettermaterials]]
+modId = "forge"
+mandatory = true
+versionRange = "[39,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.bettermaterials]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18,1.19)"
+ordering = "NONE"
+side = "BOTH"

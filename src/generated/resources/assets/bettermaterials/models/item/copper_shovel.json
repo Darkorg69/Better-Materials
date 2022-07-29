@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "bettermaterials:item/copper/copper_shovel"
+  }
+}
