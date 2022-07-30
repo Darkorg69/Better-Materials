@@ -12,8 +12,8 @@
 * **Copper Shears**, the same as regular **Shears** but with less durability.
 
 ## Blocks
-* **Block of Flint**, so you can store your **Flint** more conviniently, can be used as decoration.
-* **Block of Charcoal**, so you can store your **Charcoal** more conviniently, can be used as decoration and fuel, same as the **Block of Coal**.
+* **Block of Flint**, so you can store your **Flint** more conveniently, can be used as decoration.
+* **Block of Charcoal**, so you can store your **Charcoal** more conveniently, can be used as decoration and fuel, same as the **Block of Coal**.
 
 ![](https://i.ibb.co/XZbW8ct/Armor.png "")
 
@@ -34,7 +34,7 @@
 
 ## Notice:
 * All recipes can be accessed via [Just Enough Items (JEI)](https://www.curseforge.com/minecraft/mc-mods/jei "Just Enough Items (JEI)").
-* If you happen to encounter any bugs, please report them in mods github's repository.
+* If you happen to encounter any bugs, please report them in mods GitHub's repository.
 
 ## To-do:
 - Copper Bucket?
