@@ -5,7 +5,7 @@ issueTrackerURL = "https://github.com/darkorg69/bettermaterials/issues"
 
 [[mods]]
 modId = "bettermaterials"
-version = "1.18-1.0.0"
+version = "1.18-1.0.1"
 displayName = "BetterMaterials"
 #updateJSONURL=""
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/bettermaterials"
