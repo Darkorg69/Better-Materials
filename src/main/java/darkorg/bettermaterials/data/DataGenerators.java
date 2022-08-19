@@ -10,9 +10,9 @@ import darkorg.bettermaterials.data.common.ModRecipeProvider;
 import darkorg.bettermaterials.setup.ModReference;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(modid = BetterMaterials.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
@@ -29,11 +29,11 @@ public class DataGenerators {
         ModLootTableProvider lootTableProvider = new ModLootTableProvider(generator);
         ModRecipeProvider recipeProvider = new ModRecipeProvider(generator);
 
-        generator.addProvider(blockStateProvider);
-        generator.addProvider(itemModelProvider);
-        generator.addProvider(blockTagsProvider);
-        generator.addProvider(itemTagsProvider);
-        generator.addProvider(lootTableProvider);
-        generator.addProvider(recipeProvider);
+        generator.addProvider(true, blockStateProvider);
+        generator.addProvider(true, itemModelProvider);
+        generator.addProvider(true, blockTagsProvider);
+        generator.addProvider(true, itemTagsProvider);
+        generator.addProvider(true, lootTableProvider);
+        generator.addProvider(true, recipeProvider);
     }
 }

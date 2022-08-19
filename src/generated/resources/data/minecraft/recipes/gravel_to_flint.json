@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "group": "flint",
-  "pattern": [
-    "##",
-    "# "
-  ],
   "key": {
     "#": {
       "item": "minecraft:gravel"
     }
   },
+  "pattern": [
+    "##",
+    "# "
+  ],
   "result": {
     "item": "minecraft:flint"
   }
