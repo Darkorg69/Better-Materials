@@ -18,6 +18,18 @@
         ]
       }
     },
+    "has_leather_horse_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:leather_horse_armor"
+            ]
+          }
+        ]
+      }
+    },
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
@@ -28,6 +40,7 @@
   "requirements": [
     [
       "has_copper_ingot",
+      "has_leather_horse_armor",
       "has_the_recipe"
     ]
   ]

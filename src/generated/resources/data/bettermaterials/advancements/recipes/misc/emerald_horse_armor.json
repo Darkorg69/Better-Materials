@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:golden_horse_armor"
+      "bettermaterials:emerald_horse_armor"
     ]
   },
   "criteria": {
-    "has_gold_ingot": {
+    "has_emerald": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:gold_ingot"
+              "minecraft:emerald"
             ]
           }
         ]
@@ -33,13 +33,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:golden_horse_armor"
+        "recipe": "bettermaterials:emerald_horse_armor"
       }
     }
   },
   "requirements": [
     [
-      "has_gold_ingot",
+      "has_emerald",
       "has_leather_horse_armor",
       "has_the_recipe"
     ]

@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "bettermaterials:amethyst_horse_armor"
+      "minecraft:flint_from_gravel"
     ]
   },
   "criteria": {
-    "has_amethyst_shard": {
+    "has_gravel": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:amethyst_shard"
+              "minecraft:gravel"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "bettermaterials:amethyst_horse_armor"
+        "recipe": "minecraft:flint_from_gravel"
       }
     }
   },
   "requirements": [
     [
-      "has_amethyst_shard",
+      "has_gravel",
       "has_the_recipe"
     ]
   ]

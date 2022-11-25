@@ -1,12 +1,12 @@
 package darkorg.bettermaterials.data.common;
 
-import darkorg.bettermaterials.block.ModBlocks;
+import darkorg.bettermaterials.registry.ModBlocks;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
-public class ModBlockLootTables extends BlockLoot {
+public class ModBlockLoot extends BlockLoot {
     @Override
     protected void addTables() {
         this.dropSelf(ModBlocks.FLINT_BLOCK.get());

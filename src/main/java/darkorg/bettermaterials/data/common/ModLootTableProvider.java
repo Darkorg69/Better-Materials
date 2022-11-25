@@ -18,16 +18,17 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class ModLootTableProvider extends LootTableProvider {
-    public ModLootTableProvider(DataGenerator dataGenerator) {
-        super(dataGenerator);
+    public ModLootTableProvider(DataGenerator pGenerator) {
+        super(pGenerator);
     }
 
     @Override
     protected @NotNull List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables() {
-        return ImmutableList.of(Pair.of(ModBlockLootTables::new, LootContextParamSets.BLOCK));
+        return ImmutableList.of(Pair.of(ModBlockLoot::new, LootContextParamSets.BLOCK));
     }
 
     @Override
-    protected void validate(@NotNull Map<ResourceLocation, LootTable> map, @NotNull ValidationContext validationtracker) {
+    protected void validate(@NotNull Map<ResourceLocation, LootTable> pMap, @NotNull ValidationContext pValidationTracker) {
+
     }
 }

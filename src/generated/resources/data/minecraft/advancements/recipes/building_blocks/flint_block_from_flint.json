@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:flint"
+      "minecraft:flint_block_from_flint"
     ]
   },
   "criteria": {
-    "has_Block{bettermaterials:flint_block}": {
+    "has_flint": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "bettermaterials:flint_block"
+              "minecraft:flint"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:flint"
+        "recipe": "minecraft:flint_block_from_flint"
       }
     }
   },
   "requirements": [
     [
-      "has_Block{bettermaterials:flint_block}",
+      "has_flint",
       "has_the_recipe"
     ]
   ]

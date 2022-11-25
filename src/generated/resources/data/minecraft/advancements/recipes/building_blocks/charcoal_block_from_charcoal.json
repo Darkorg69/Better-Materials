@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "bettermaterials:charcoal_block"
+      "minecraft:charcoal_block_from_charcoal"
     ]
   },
   "criteria": {
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "bettermaterials:charcoal_block"
+        "recipe": "minecraft:charcoal_block_from_charcoal"
       }
     }
   },

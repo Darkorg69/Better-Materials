@@ -6,14 +6,48 @@
     ]
   },
   "criteria": {
-    "has_": {
+    "has_iron_ingot": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:saddle"
+              "minecraft:iron_ingot"
             ]
+          }
+        ]
+      }
+    },
+    "has_leather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:leather"
+            ]
+          }
+        ]
+      }
+    },
+    "has_string": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:string"
+            ]
+          }
+        ]
+      }
+    },
+    "has_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:wool"
           }
         ]
       }
@@ -27,7 +61,10 @@
   },
   "requirements": [
     [
-      "has_",
+      "has_iron_ingot",
+      "has_leather",
+      "has_string",
+      "has_wool",
       "has_the_recipe"
     ]
   ]
