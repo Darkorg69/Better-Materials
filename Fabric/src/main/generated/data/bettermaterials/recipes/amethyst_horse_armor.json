@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "/": {
+      "item": "minecraft:leather_horse_armor"
+    }
+  },
+  "pattern": [
+    "# #",
+    "###",
+    "#/#"
+  ],
+  "result": {
+    "item": "bettermaterials:amethyst_horse_armor"
+  },
+  "show_notification": true
+}

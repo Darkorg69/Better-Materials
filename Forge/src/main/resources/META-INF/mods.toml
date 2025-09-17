@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "${forge_loader_version_range}"
+license = "${license}"
+issueTrackerURL = "${issueTrackerURL}"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_display_name}"
+updateJSONURL = "${updateJSONURL}"
+displayURL = "${displayURL}"
+logoFile = "${mod_id}.png"
+credits = "${credits}"
+authors = "${author}"
+description = '''${description}'''
+
+[[mixins]]
+config = "${mod_id}.common.mixins.json"
+
+[[mixins]]
+config = "${mod_id}.forge.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId = "forge"
+mandatory = true
+versionRange = "${forge_loader_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"

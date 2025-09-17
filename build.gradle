@@ -1,81 +1,107 @@
 plugins {
-    id 'eclipse'
-    id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '5.1.+'
-    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    //id "org.jetbrains.gradle.plugin.idea-ext" version "1.1.8"
 }
 
-version = "${minecraft_version}-${mod_version}"
-group = "darkorg.${mod_id}"
-archivesBaseName = mod_id
+subprojects {
+    apply plugin: 'java'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+    java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+    java.withSourcesJar()
+    java.withJavadocJar()
 
-minecraft {
-    mappings channel: 'parchment', version: mappings_version
-
-    runs {
-        client {
-            workingDirectory project.file('run')
-
-            mods {
-                mod_id {
-                    source sourceSets.main
-                }
-            }
+    jar {
+        from(rootProject.file("LICENSE")) {
+            rename { "${it}_${mod_id}" }
         }
-
-        data {
-            workingDirectory project.file('run')
-
-            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
-
-            mods {
-                mod_id {
-                    source sourceSets.main
-                }
-            }
+        manifest {
+            attributes(['Specification-Title'     : mod_display_name,
+                        'Specification-Vendor'    : author,
+                        'Specification-Version'   : project.jar.archiveVersion,
+                        'Implementation-Title'    : project.name,
+                        'Implementation-Version'  : project.jar.archiveVersion,
+                        'Implementation-Vendor'   : author,
+                        'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                        'Timestamp'               : System.currentTimeMillis(),
+                        'Built-On-Java'           : "${System.getProperty('java.vm.version')} (${System.getProperty('java.vm.vendor')})",
+                        'Built-On-Minecraft'      : minecraft_version])
         }
     }
-}
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
-
-repositories {
-    maven {
-        name = "Progwml6 maven"
-        url = "https://dvs1.progwml6.com/files/maven/"
+    sourcesJar {
+        from(rootProject.file("LICENSE")) {
+            rename { "${it}_${mod_display_name}" }
+        }
     }
-    maven {
-        name = "ModMaven"
-        url = "https://modmaven.dev"
+
+    repositories {
+        mavenCentral()
+        maven {
+            name = 'Sponge Snapshots'
+            url = 'https://repo.spongepowered.org/repository/maven-public/'
+        }
+        maven {
+            name = "Fuzs Mod Resources"
+            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+        }
+        maven {
+            // location of the maven that hosts JEI files before January 2023
+            name = "Progwml6's maven"
+            url = "https://dvs1.progwml6.com/files/maven/"
+        }
+        maven {
+            // location of the maven that hosts JEI files since January 2023
+            name = "Jared's maven"
+            url = "https://maven.blamejared.com/"
+        }
+        maven {
+            // location of a maven mirror for JEI files, as a fallback
+            name = "ModMaven"
+            url = "https://modmaven.dev"
+        }
+        maven {
+            url = "https://www.cursemaven.com"
+            content {
+                includeGroup "curse.maven"
+            }
+        }
     }
-}
 
-dependencies {
-    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-
-    //Just Enough Items
-    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
-    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
-
-    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
-}
-
-jar {
-    manifest {
-        attributes(["Specification-Title"     : mod_display_name,
-                    "Specification-Vendor"    : "Darkorg69",
-                    "Specification-Version"   : "${minecraft_version}-${mod_version}",
-                    "Implementation-Title"    : project.name,
-                    "Implementation-Version"  : "${minecraft_version}-${mod_version}",
-                    "Implementation-Vendor"   : "Darkorg69",
-                    "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")])
+    tasks.withType(JavaCompile).configureEach {
+        it.options.encoding = 'UTF-8'
+        it.options.getRelease().set(17)
     }
-}
 
-jar.finalizedBy('reobfJar')
-
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8'
+    processResources {
+        def expandProps = [
+                //Project
+                "projectGroup"              : project.group, //Else we target the task's group
+                //Mod
+                "mod_id"                    : "${mod_id}",
+                "mod_version"               : "${mod_version}",
+                "mod_display_name"          : "${mod_display_name}",
+                //Minecraft
+                "minecraft_version"         : "${minecraft_version}",
+                "minecraft_version_range"   : "${minecraft_version_range}",
+                //Common
+                "author"                    : "${author}",
+                "license"                   : "${license}",
+                "credits"                   : "${credits}",
+                "description"               : "${mod_description}",
+                "displayURL"                : "${displayURL}",
+                "issueTrackerURL"           : "${issueTrackerURL}",
+                "updateJSONURL"             : "${updateJSONURL}",
+                //Forge
+                "forge_version"             : "${forge_version}",
+                "forge_loader_version_range": "${forge_loader_version_range}",
+                //Fabric
+                "fabric_version"            : "${fabric_version}",
+                "fabric_loader_version"     : "${fabric_loader_version}",
+                //Dependencies
+                "fcap_version"              : "${fcap_version}",
+                "fcap_version_range"        : "${fcap_version_range}"]
+        filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', '*.mixins.json']) {
+            expand expandProps
+        }
+        inputs.properties(expandProps)
+    }
 }
