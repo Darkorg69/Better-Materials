@@ -1,7 +1,3 @@
-plugins {
-    //id "org.jetbrains.gradle.plugin.idea-ext" version "1.1.8"
-}
-
 subprojects {
     apply plugin: 'java'
 
@@ -14,12 +10,12 @@ subprojects {
             rename { "${it}_${mod_id}" }
         }
         manifest {
-            attributes(['Specification-Title'     : mod_display_name,
-                        'Specification-Vendor'    : author,
+            attributes(['Specification-Title'     : mod_name,
+                        'Specification-Vendor'    : authors,
                         'Specification-Version'   : project.jar.archiveVersion,
                         'Implementation-Title'    : project.name,
                         'Implementation-Version'  : project.jar.archiveVersion,
-                        'Implementation-Vendor'   : author,
+                        'Implementation-Vendor'   : authors,
                         'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
                         'Timestamp'               : System.currentTimeMillis(),
                         'Built-On-Java'           : "${System.getProperty('java.vm.version')} (${System.getProperty('java.vm.vendor')})",
@@ -29,41 +25,18 @@ subprojects {
 
     sourcesJar {
         from(rootProject.file("LICENSE")) {
-            rename { "${it}_${mod_display_name}" }
+            rename { "${it}_${mod_name}" }
         }
     }
 
     repositories {
         mavenCentral()
-        maven {
-            name = 'Sponge Snapshots'
-            url = 'https://repo.spongepowered.org/repository/maven-public/'
-        }
-        maven {
-            name = "Fuzs Mod Resources"
-            url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
-        }
-        maven {
-            // location of the maven that hosts JEI files before January 2023
-            name = "Progwml6's maven"
-            url = "https://dvs1.progwml6.com/files/maven/"
-        }
-        maven {
-            // location of the maven that hosts JEI files since January 2023
-            name = "Jared's maven"
-            url = "https://maven.blamejared.com/"
-        }
-        maven {
-            // location of a maven mirror for JEI files, as a fallback
-            name = "ModMaven"
-            url = "https://modmaven.dev"
-        }
-        maven {
-            url = "https://www.cursemaven.com"
-            content {
-                includeGroup "curse.maven"
-            }
-        }
+        maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+        maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" }
+        maven { url = "https://dvs1.progwml6.com/files/maven/" }
+        maven { url = "https://maven.blamejared.com/" }
+        maven { url = "https://modmaven.dev" }
+        maven { url = "https://www.cursemaven.com" }
     }
 
     tasks.withType(JavaCompile).configureEach {
@@ -72,36 +45,38 @@ subprojects {
     }
 
     processResources {
-        def expandProps = [
-                //Project
-                "projectGroup"              : project.group, //Else we target the task's group
-                //Mod
-                "mod_id"                    : "${mod_id}",
-                "mod_version"               : "${mod_version}",
-                "mod_display_name"          : "${mod_display_name}",
-                //Minecraft
-                "minecraft_version"         : "${minecraft_version}",
-                "minecraft_version_range"   : "${minecraft_version_range}",
-                //Common
-                "author"                    : "${author}",
-                "license"                   : "${license}",
-                "credits"                   : "${credits}",
-                "description"               : "${mod_description}",
-                "displayURL"                : "${displayURL}",
-                "issueTrackerURL"           : "${issueTrackerURL}",
-                "updateJSONURL"             : "${updateJSONURL}",
-                //Forge
-                "forge_version"             : "${forge_version}",
-                "forge_loader_version_range": "${forge_loader_version_range}",
-                //Fabric
-                "fabric_version"            : "${fabric_version}",
-                "fabric_loader_version"     : "${fabric_loader_version}",
-                //Dependencies
-                "fcap_version"              : "${fcap_version}",
-                "fcap_version_range"        : "${fcap_version_range}"]
-        filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', '*.mixins.json']) {
-            expand expandProps
+        def properties = ["projectGroup"              : project.group,
+                          //Mod
+                          "mod_id"                    : mod_id,
+                          "mod_version"               : mod_version,
+                          "mod_name"                  : mod_name,
+                          //Minecraft
+                          "minecraft_version"         : minecraft_version,
+                          "minecraft_version_range"   : minecraft_version_range,
+                          //Common
+                          "authors"                   : authors,
+                          "license"                   : license,
+                          "credits"                   : credits,
+                          "description"               : description,
+                          "displayURL"                : displayURL,
+                          "issueTrackerURL"           : issueTrackerURL,
+                          "updateJSONURL"             : updateJSONURL,
+                          //Forge
+                          "forge_version"             : forge_version,
+                          "forge_mod_version_range"   : forge_mod_version_range,
+                          "forge_loader_version_range": forge_loader_version_range,
+                          //Fabric
+                          "fabric_version"            : fabric_version,
+                          "fabric_loader_version"     : fabric_loader_version,
+                          //Parchment mappings
+                          "parchment_version"         : parchment_version,
+                          //Optional dependencies
+                          "jei_version"               : jei_version]
+
+        filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', '*.mixins.json', 'update.json']) {
+            expand(properties)
         }
-        inputs.properties(expandProps)
+
+        inputs.properties(properties)
     }
 }

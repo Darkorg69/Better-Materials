@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "id": "${mod_id}",
   "version": "${mod_version}",
-  "name": "${mod_display_name}",
+  "name": "${mod_name}",
   "description": "${description}",
   "authors": [
-    "${author}"
+    "${authors}"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
