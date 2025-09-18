@@ -1,6 +1,5 @@
 package darkorg.bettermaterials.common.platform.services;
 
-import darkorg.bettermaterials.common.registry.ModReference;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 

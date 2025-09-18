@@ -8,18 +8,18 @@ import java.util.function.Supplier;
 
 public class ModReference {
     //Combat
-    public static List<Supplier<Item>> SWORDS = new ArrayList<>();
-    public static List<Supplier<Item>> COPPER_ARMOR = new ArrayList<>();
-    public static List<Supplier<Item>> EMERALD_ARMOR = new ArrayList<>();
-    public static List<Supplier<Item>> AMETHYST_ARMOR = new ArrayList<>();
+    public static final List<Supplier<Item>> SWORDS = new ArrayList<>();
+    public static final List<Supplier<Item>> COPPER_ARMOR = new ArrayList<>();
+    public static final List<Supplier<Item>> EMERALD_ARMOR = new ArrayList<>();
+    public static final List<Supplier<Item>> AMETHYST_ARMOR = new ArrayList<>();
 
     // Tools and utilities
 
-    public static List<Supplier<Item>> BONE_TOOLS = new ArrayList<>();
-    public static List<Supplier<Item>> FLINT_TOOLS = new ArrayList<>();
-    public static List<Supplier<Item>> COPPER_TOOLS = new ArrayList<>();
-    public static List<Supplier<Item>> EMERALD_TOOLS = new ArrayList<>();
-    public static List<Supplier<Item>> AMETHYST_TOOLS = new ArrayList<>();
+    public static final List<Supplier<Item>> BONE_TOOLS = new ArrayList<>();
+    public static final List<Supplier<Item>> FLINT_TOOLS = new ArrayList<>();
+    public static final List<Supplier<Item>> COPPER_TOOLS = new ArrayList<>();
+    public static final List<Supplier<Item>> EMERALD_TOOLS = new ArrayList<>();
+    public static final List<Supplier<Item>> AMETHYST_TOOLS = new ArrayList<>();
 
     public static void init() {
         //Combat

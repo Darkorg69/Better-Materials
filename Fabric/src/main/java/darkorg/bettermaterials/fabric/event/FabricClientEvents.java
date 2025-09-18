@@ -2,15 +2,10 @@ package darkorg.bettermaterials.fabric.event;
 
 import darkorg.bettermaterials.common.registry.BetterMaterialsBlocks;
 import darkorg.bettermaterials.common.registry.BetterMaterialsItems;
-import darkorg.bettermaterials.common.registry.ModReference;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.level.block.Blocks;
-
-import java.util.function.Supplier;
 
 public abstract class FabricClientEvents {
     public static void init() {

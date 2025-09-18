@@ -3,7 +3,6 @@ package darkorg.bettermaterials.fabric.platform;
 import darkorg.bettermaterials.common.BetterMaterials;
 import darkorg.bettermaterials.common.platform.services.IRegistryHelper;
 import darkorg.bettermaterials.common.registry.BetterMaterialsRegistries;
-import darkorg.bettermaterials.common.registry.ModReference;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

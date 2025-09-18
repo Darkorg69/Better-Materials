@@ -3,7 +3,6 @@ package darkorg.bettermaterials.forge.platform;
 import darkorg.bettermaterials.common.BetterMaterials;
 import darkorg.bettermaterials.common.platform.services.IRegistryHelper;
 import darkorg.bettermaterials.common.registry.BetterMaterialsRegistries;
-import darkorg.bettermaterials.common.registry.ModReference;
 import darkorg.bettermaterials.forge.BetterMaterialsForge;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
