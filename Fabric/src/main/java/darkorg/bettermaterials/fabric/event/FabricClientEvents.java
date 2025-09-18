@@ -6,6 +6,8 @@ import darkorg.bettermaterials.common.registry.ModReference;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.function.Supplier;
@@ -22,50 +24,68 @@ public abstract class FabricClientEvents {
         });
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(pFabricItemGroupEntries -> {
+            //swords
+            pFabricItemGroupEntries.addBefore(Items.STONE_SWORD, BetterMaterialsItems.BONE_SWORD.get());
+            pFabricItemGroupEntries.addBefore(Items.IRON_SWORD, BetterMaterialsItems.COPPER_SWORD.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.COPPER_SWORD.get(), BetterMaterialsItems.FLINT_SWORD.get());
+            pFabricItemGroupEntries.addBefore(Items.DIAMOND_SWORD, BetterMaterialsItems.AMETHYST_SWORD.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.AMETHYST_SWORD.get(), BetterMaterialsItems.EMERALD_SWORD.get());
 
+            //copper armor
+            pFabricItemGroupEntries.addBefore(Items.IRON_HELMET, BetterMaterialsItems.COPPER_HELMET.get());
+            pFabricItemGroupEntries.addBefore(Items.IRON_CHESTPLATE, BetterMaterialsItems.COPPER_CHESTPLATE.get());
+            pFabricItemGroupEntries.addBefore(Items.IRON_LEGGINGS, BetterMaterialsItems.COPPER_LEGGINGS.get());
+            pFabricItemGroupEntries.addBefore(Items.IRON_BOOTS, BetterMaterialsItems.COPPER_BOOTS.get());
 
-            for (Supplier<Item> item : ModReference.SWORDS) {
-                pFabricItemGroupEntries.accept(item.get());
-            }
+            //amethyst armor
+            pFabricItemGroupEntries.addBefore(Items.DIAMOND_HELMET, BetterMaterialsItems.AMETHYST_HELMET.get());
+            pFabricItemGroupEntries.addBefore(Items.DIAMOND_CHESTPLATE, BetterMaterialsItems.AMETHYST_CHESTPLATE.get());
+            pFabricItemGroupEntries.addBefore(Items.DIAMOND_LEGGINGS, BetterMaterialsItems.AMETHYST_LEGGINGS.get());
+            pFabricItemGroupEntries.addBefore(Items.DIAMOND_BOOTS, BetterMaterialsItems.AMETHYST_BOOTS.get());
 
-            for (Supplier<Item> item : ModReference.COPPER_ARMOR) {
-                pFabricItemGroupEntries.accept(item.get());
-            }
+            //emerald armor
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.AMETHYST_HELMET.get(), BetterMaterialsItems.EMERALD_HELMET.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.AMETHYST_CHESTPLATE.get(), BetterMaterialsItems.EMERALD_CHESTPLATE.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.AMETHYST_LEGGINGS.get(), BetterMaterialsItems.EMERALD_LEGGINGS.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.AMETHYST_BOOTS.get(), BetterMaterialsItems.EMERALD_BOOTS.get());
 
-            for (Supplier<Item> item : ModReference.EMERALD_ARMOR) {
-                pFabricItemGroupEntries.accept(item.get());
-            }
-
-            for (Supplier<Item> item : ModReference.AMETHYST_ARMOR) {
-                pFabricItemGroupEntries.accept(item.get());
-            }
-
-            pFabricItemGroupEntries.accept(BetterMaterialsItems.COPPER_HORSE_ARMOR.get());
-            pFabricItemGroupEntries.accept(BetterMaterialsItems.EMERALD_HORSE_ARMOR.get());
-            pFabricItemGroupEntries.accept(BetterMaterialsItems.AMETHYST_HORSE_ARMOR.get());
+            //horse armor
+            pFabricItemGroupEntries.addBefore(Items.IRON_HORSE_ARMOR, BetterMaterialsItems.COPPER_HORSE_ARMOR.get());
+            pFabricItemGroupEntries.addBefore(Items.DIAMOND_HORSE_ARMOR, BetterMaterialsItems.AMETHYST_HORSE_ARMOR.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.AMETHYST_HORSE_ARMOR.get(), BetterMaterialsItems.EMERALD_HORSE_ARMOR.get());
         });
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(pFabricItemGroupEntries -> {
 
-            for (Supplier<Item> item : ModReference.BONE_TOOLS) {
-                pFabricItemGroupEntries.accept(item.get());
-            }
+            //bone tools
+            pFabricItemGroupEntries.addBefore(Items.STONE_PICKAXE, BetterMaterialsItems.BONE_PICKAXE.get());
+            pFabricItemGroupEntries.addBefore(Items.STONE_SHOVEL, BetterMaterialsItems.BONE_SHOVEL.get());
+            pFabricItemGroupEntries.addBefore(Items.STONE_AXE, BetterMaterialsItems.BONE_AXE.get());
+            pFabricItemGroupEntries.addBefore(Items.STONE_HOE, BetterMaterialsItems.BONE_HOE.get());
 
-            for (Supplier<Item> item : ModReference.FLINT_TOOLS) {
-                pFabricItemGroupEntries.accept(item.get());
-            }
+            //copper tools
+            pFabricItemGroupEntries.addBefore(Items.IRON_PICKAXE, BetterMaterialsItems.COPPER_PICKAXE.get());
+            pFabricItemGroupEntries.addBefore(Items.IRON_SHOVEL, BetterMaterialsItems.COPPER_SHOVEL.get());
+            pFabricItemGroupEntries.addBefore(Items.IRON_AXE, BetterMaterialsItems.COPPER_AXE.get());
+            pFabricItemGroupEntries.addBefore(Items.IRON_HOE, BetterMaterialsItems.COPPER_HOE.get());
 
-            for (Supplier<Item> item : ModReference.COPPER_TOOLS) {
-                pFabricItemGroupEntries.accept(item.get());
-            }
+            //flint tools
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.COPPER_PICKAXE.get(), BetterMaterialsItems.FLINT_PICKAXE.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.COPPER_SHOVEL.get(), BetterMaterialsItems.FLINT_SHOVEL.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.COPPER_AXE.get(), BetterMaterialsItems.FLINT_AXE.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.COPPER_HOE.get(), BetterMaterialsItems.FLINT_HOE.get());
 
-            for (Supplier<Item> item : ModReference.EMERALD_TOOLS) {
-                pFabricItemGroupEntries.accept(item.get());
-            }
+            //amethyst tools
+            pFabricItemGroupEntries.addBefore(Items.DIAMOND_PICKAXE, BetterMaterialsItems.AMETHYST_PICKAXE.get());
+            pFabricItemGroupEntries.addBefore(Items.DIAMOND_SHOVEL, BetterMaterialsItems.AMETHYST_SHOVEL.get());
+            pFabricItemGroupEntries.addBefore(Items.DIAMOND_AXE, BetterMaterialsItems.AMETHYST_AXE.get());
+            pFabricItemGroupEntries.addBefore(Items.DIAMOND_HOE, BetterMaterialsItems.AMETHYST_HOE.get());
 
-            for (Supplier<Item> item : ModReference.AMETHYST_TOOLS) {
-                pFabricItemGroupEntries.accept(item.get());
-            }
+            //emerald tools
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.AMETHYST_PICKAXE.get(), BetterMaterialsItems.EMERALD_PICKAXE.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.AMETHYST_SHOVEL.get(), BetterMaterialsItems.EMERALD_SHOVEL.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.AMETHYST_AXE.get(), BetterMaterialsItems.EMERALD_AXE.get());
+            pFabricItemGroupEntries.addBefore(BetterMaterialsItems.AMETHYST_HOE.get(), BetterMaterialsItems.EMERALD_HOE.get());
         });
     }
 }
