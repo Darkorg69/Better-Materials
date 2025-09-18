@@ -1,10 +1,11 @@
-// 1.20.1	2025-09-18T00:47:21.9689472	Better Materials/Model Definitions
+// 1.20.1	2025-09-18T02:59:19.9625831	Better Materials/Model Definitions
 a82484ba9e02e64eb63536e698f55db8ece0072a assets\bettermaterials\models\item\copper_pickaxe.json
 ea70a30a0231a428224d54a3c6218d704fa1ac48 assets\bettermaterials\models\item\amethyst_shovel.json
 f4552ef3101cdad172d44bc65f7ab1bc8a171f86 assets\bettermaterials\models\item\amethyst_axe.json
 5efbe17b33ccd8380ba1d0665364ceb51d5e517c assets\bettermaterials\models\item\amethyst_leggings.json
 c44689cc3c7ac7e0a65df313416d0a21efeda130 assets\bettermaterials\models\item\amethyst_hoe.json
 bcba17f6fc6712918db83198712b1e84141e9d66 assets\bettermaterials\models\item\amethyst_boots.json
+6e29a63985c9b2513ed71c5b979d6a87e7a6bd93 assets\bettermaterials\models\item\copper_horse_armor.json
 fedce1bf5262ed4871b8942269543beee9138d91 assets\bettermaterials\models\item\bone_shovel.json
 699698f6a4cc45e8c93c3410273fb242cabfef77 assets\bettermaterials\models\item\flint_block.json
 976b1b49e3d70ce8432e90d92a8eab423a1add42 assets\bettermaterials\models\item\emerald_pickaxe.json
@@ -16,6 +17,7 @@ d9b3f7dca9bd156c3ce9e8142778000215364b37 assets\bettermaterials\models\block\cha
 59dde03df9648fbadb6d4f3ed3cce4ca7bf29811 assets\bettermaterials\models\item\copper_chestplate.json
 8ac924877497eaee816e1d7240b3cb5866363626 assets\bettermaterials\models\block\flint_block.json
 e1517838d8035d5c8385314839d08e9fe0496af3 assets\bettermaterials\models\item\flint_shovel.json
+e7ea4a92f8b2685ad30323bf383884e818506635 assets\bettermaterials\models\item\emerald_horse_armor.json
 a8034d76db678f80ef0e1225f67bbdbafdda3b6a assets\bettermaterials\models\item\bone_sword.json
 c24e0ffc058d591645312496f7563bcfc2dafa74 assets\bettermaterials\models\item\emerald_chestplate.json
 b16607d13dbc709a91d37e5ce6cbc75c60e4c0f8 assets\bettermaterials\models\item\emerald_sword.json
@@ -32,6 +34,7 @@ b85f43a6335604e27893ad4784092c1cccba182e assets\bettermaterials\models\item\char
 bbc4cf137c89b822df648a1e8130cb74c0030a3b assets\bettermaterials\models\item\amethyst_sword.json
 288e6991cc2f1b28b241f853cea22e79a78aac15 assets\bettermaterials\models\item\amethyst_chestplate.json
 d03b935402131ca2cec5840631e19e11f51e43a2 assets\bettermaterials\models\item\copper_boots.json
+be01b23d36d18bfe190a30c12f3184b966d63af1 assets\bettermaterials\models\item\amethyst_horse_armor.json
 a2cc262a3880c0d105fd9cf130646af535a75790 assets\bettermaterials\models\item\amethyst_helmet.json
 72f049d4643b06a452b7e807938e2e4290c7e40a assets\bettermaterials\models\item\amethyst_pickaxe.json
 b2cf708cc4502bb49214ba9e25289cf41cc9852a assets\bettermaterials\models\item\bone_hoe.json

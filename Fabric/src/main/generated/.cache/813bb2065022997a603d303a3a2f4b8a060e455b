@@ -1,6 +1,6 @@
-// 1.20.1	2025-09-18T00:47:21.9689472	Better Materials/Recipes
-5c0cd30b64e231adfeae4883dd01e9ef9232d1ca data\bettermaterials\recipes\flint_block.json
+// 1.20.1	2025-09-18T02:59:19.9635846	Better Materials/Recipes
 db77f4bc4fac954bcfc35528c192487baabc657a data\bettermaterials\advancements\recipes\combat\amethyst_helmet.json
+5c0cd30b64e231adfeae4883dd01e9ef9232d1ca data\bettermaterials\recipes\flint_block.json
 1aedd6f0a00d55ae5055bb489f0c5563421806b5 data\bettermaterials\recipes\copper_sword.json
 38871bee2e7b4efe3c6181be93372b071c7c7e40 data\bettermaterials\recipes\bone_sword.json
 2883c1af34953ecf40f9d6ec360295c5b22d0375 data\bettermaterials\advancements\recipes\misc\flint_block.json
@@ -21,8 +21,8 @@ cb605c83e39f8cd807eaabb987ee30ba3ed213ce data\bettermaterials\recipes\copper_she
 0871c7c38fd5b627e81c48ea344878c00f8177a4 data\bettermaterials\advancements\recipes\combat\emerald_boots.json
 ddd0e3fc0788dfefe1d627034c0b949e6403e4e5 data\bettermaterials\advancements\recipes\tools\amethyst_shovel.json
 1be6bc73f4176e00d0e38e949755bcb7fea4bc4a data\bettermaterials\advancements\recipes\combat\emerald_leggings.json
-b7388a533e4615b8537534b734251d52bf70b273 data\bettermaterials\recipes\amethyst_sword.json
 064785ccd86e4abe48cd3bed67b7fa2d53e35d53 data\bettermaterials\recipes\flint.json
+b7388a533e4615b8537534b734251d52bf70b273 data\bettermaterials\recipes\amethyst_sword.json
 f9482330e6debd3affecb4dadabdf9168da7d2f2 data\bettermaterials\recipes\emerald_chestplate.json
 12fc7c21f05f2e67bc25dd64a4a3039ff17479f0 data\bettermaterials\recipes\emerald_boots.json
 cf4b75f2925e9d790a8980cfbc81bea1b8d880e5 data\bettermaterials\advancements\recipes\misc\charcoal_block.json

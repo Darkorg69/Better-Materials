@@ -2,10 +2,6 @@ package darkorg.bettermaterials.common.registry;
 
 import darkorg.bettermaterials.common.BetterMaterials;
 import darkorg.bettermaterials.common.platform.Services;
-import darkorg.bettermaterials.common.registry.item.ModAxeItem;
-import darkorg.bettermaterials.common.registry.item.ModHoeItem;
-import darkorg.bettermaterials.common.registry.item.ModPickaxeItem;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.*;
 
 import java.util.function.Supplier;
@@ -13,34 +9,34 @@ import java.util.function.Supplier;
 public abstract class BetterMaterialsItems {
     public static final Supplier<Item> BONE_SWORD = Services.REGISTRY_HELPER.registerItem("bone_sword", () -> new SwordItem(BetterMaterialsTiers.BONE, 3, -2.4F, (new Item.Properties())));
     public static final Supplier<Item> BONE_SHOVEL = Services.REGISTRY_HELPER.registerItem("bone_shovel", () -> new ShovelItem(BetterMaterialsTiers.BONE, 1.5F, -3.0F, (new Item.Properties())));
-    public static final Supplier<Item> BONE_PICKAXE = Services.REGISTRY_HELPER.registerItem("bone_pickaxe", () -> new ModPickaxeItem(BetterMaterialsTiers.BONE, 1, -2.8F, BlockTags.NEEDS_STONE_TOOL, (new Item.Properties())));
-    public static final Supplier<Item> BONE_AXE = Services.REGISTRY_HELPER.registerItem("bone_axe", () -> new ModAxeItem(BetterMaterialsTiers.BONE, 6.0F, -3.2F, BlockTags.NEEDS_STONE_TOOL, (new Item.Properties())));
-    public static final Supplier<Item> BONE_HOE = Services.REGISTRY_HELPER.registerItem("bone_hoe", () -> new ModHoeItem(BetterMaterialsTiers.BONE, 0, -3.0F, BlockTags.NEEDS_STONE_TOOL, (new Item.Properties())));
+    public static final Supplier<Item> BONE_PICKAXE = Services.REGISTRY_HELPER.registerItem("bone_pickaxe", () -> new PickaxeItem(BetterMaterialsTiers.BONE, 1, -2.8F, (new Item.Properties())));
+    public static final Supplier<Item> BONE_AXE = Services.REGISTRY_HELPER.registerItem("bone_axe", () -> new AxeItem(BetterMaterialsTiers.BONE, 6.0F, -3.2F, (new Item.Properties())));
+    public static final Supplier<Item> BONE_HOE = Services.REGISTRY_HELPER.registerItem("bone_hoe", () -> new HoeItem(BetterMaterialsTiers.BONE, 0, -3.0F, (new Item.Properties())));
 
     public static final Supplier<Item> FLINT_SWORD = Services.REGISTRY_HELPER.registerItem("flint_sword", () -> new SwordItem(BetterMaterialsTiers.FLINT, 3, -2.4F, (new Item.Properties())));
     public static final Supplier<Item> FLINT_SHOVEL = Services.REGISTRY_HELPER.registerItem("flint_shovel", () -> new ShovelItem(BetterMaterialsTiers.FLINT, 1.5F, -3.0F, (new Item.Properties())));
-    public static final Supplier<Item> FLINT_PICKAXE = Services.REGISTRY_HELPER.registerItem("flint_pickaxe", () -> new ModPickaxeItem(BetterMaterialsTiers.FLINT, 1, -2.8F, BlockTags.NEEDS_IRON_TOOL, (new Item.Properties())));
-    public static final Supplier<Item> FLINT_AXE = Services.REGISTRY_HELPER.registerItem("flint_axe", () -> new ModAxeItem(BetterMaterialsTiers.FLINT, 6.0F, -3.2F, BlockTags.NEEDS_IRON_TOOL, (new Item.Properties())));
-    public static final Supplier<Item> FLINT_HOE = Services.REGISTRY_HELPER.registerItem("flint_hoe", () -> new ModHoeItem(BetterMaterialsTiers.FLINT, -1, -2.0F, BlockTags.NEEDS_IRON_TOOL, (new Item.Properties())));
+    public static final Supplier<Item> FLINT_PICKAXE = Services.REGISTRY_HELPER.registerItem("flint_pickaxe", () -> new PickaxeItem(BetterMaterialsTiers.FLINT, 1, -2.8F, (new Item.Properties())));
+    public static final Supplier<Item> FLINT_AXE = Services.REGISTRY_HELPER.registerItem("flint_axe", () -> new AxeItem(BetterMaterialsTiers.FLINT, 6.0F, -3.2F, (new Item.Properties())));
+    public static final Supplier<Item> FLINT_HOE = Services.REGISTRY_HELPER.registerItem("flint_hoe", () -> new HoeItem(BetterMaterialsTiers.FLINT, -1, -2.0F, (new Item.Properties())));
 
     public static final Supplier<Item> COPPER_SWORD = Services.REGISTRY_HELPER.registerItem("copper_sword", () -> new SwordItem(BetterMaterialsTiers.COPPER, 3, -2.4F, (new Item.Properties())));
     public static final Supplier<Item> COPPER_SHOVEL = Services.REGISTRY_HELPER.registerItem("copper_shovel", () -> new ShovelItem(BetterMaterialsTiers.COPPER, 1.5F, -3.0F, (new Item.Properties())));
-    public static final Supplier<Item> COPPER_PICKAXE = Services.REGISTRY_HELPER.registerItem("copper_pickaxe", () -> new ModPickaxeItem(BetterMaterialsTiers.COPPER, 1, -2.8F, BlockTags.NEEDS_IRON_TOOL, (new Item.Properties())));
-    public static final Supplier<Item> COPPER_AXE = Services.REGISTRY_HELPER.registerItem("copper_axe", () -> new ModAxeItem(BetterMaterialsTiers.COPPER, 6.0F, -3.2F, BlockTags.NEEDS_IRON_TOOL, (new Item.Properties())));
-    public static final Supplier<Item> COPPER_HOE = Services.REGISTRY_HELPER.registerItem("copper_hoe", () -> new ModHoeItem(BetterMaterialsTiers.COPPER, -1, -2.0F, BlockTags.NEEDS_IRON_TOOL, (new Item.Properties())));
+    public static final Supplier<Item> COPPER_PICKAXE = Services.REGISTRY_HELPER.registerItem("copper_pickaxe", () -> new PickaxeItem(BetterMaterialsTiers.COPPER, 1, -2.8F, (new Item.Properties())));
+    public static final Supplier<Item> COPPER_AXE = Services.REGISTRY_HELPER.registerItem("copper_axe", () -> new AxeItem(BetterMaterialsTiers.COPPER, 6.0F, -3.2F, (new Item.Properties())));
+    public static final Supplier<Item> COPPER_HOE = Services.REGISTRY_HELPER.registerItem("copper_hoe", () -> new HoeItem(BetterMaterialsTiers.COPPER, -1, -2.0F, (new Item.Properties())));
     public static final Supplier<Item> COPPER_SHEARS = Services.REGISTRY_HELPER.registerItem("copper_shears", () -> new ShearsItem(new Item.Properties().durability(158)));
 
     public static final Supplier<Item> EMERALD_SWORD = Services.REGISTRY_HELPER.registerItem("emerald_sword", () -> new SwordItem(BetterMaterialsTiers.EMERALD, 3, -2.4F, (new Item.Properties())));
     public static final Supplier<Item> EMERALD_SHOVEL = Services.REGISTRY_HELPER.registerItem("emerald_shovel", () -> new ShovelItem(BetterMaterialsTiers.EMERALD, 1.5F, -3.0F, (new Item.Properties())));
-    public static final Supplier<Item> EMERALD_PICKAXE = Services.REGISTRY_HELPER.registerItem("emerald_pickaxe", () -> new ModPickaxeItem(BetterMaterialsTiers.EMERALD, 1, -2.8F, BlockTags.NEEDS_DIAMOND_TOOL, (new Item.Properties())));
-    public static final Supplier<Item> EMERALD_AXE = Services.REGISTRY_HELPER.registerItem("emerald_axe", () -> new ModAxeItem(BetterMaterialsTiers.EMERALD, 5.5F, -3.1F, BlockTags.NEEDS_DIAMOND_TOOL, (new Item.Properties())));
-    public static final Supplier<Item> EMERALD_HOE = Services.REGISTRY_HELPER.registerItem("emerald_hoe", () -> new ModHoeItem(BetterMaterialsTiers.EMERALD, -2, -1.0F, BlockTags.NEEDS_DIAMOND_TOOL, (new Item.Properties())));
+    public static final Supplier<Item> EMERALD_PICKAXE = Services.REGISTRY_HELPER.registerItem("emerald_pickaxe", () -> new PickaxeItem(BetterMaterialsTiers.EMERALD, 1, -2.8F, (new Item.Properties())));
+    public static final Supplier<Item> EMERALD_AXE = Services.REGISTRY_HELPER.registerItem("emerald_axe", () -> new AxeItem(BetterMaterialsTiers.EMERALD, 5.5F, -3.1F, (new Item.Properties())));
+    public static final Supplier<Item> EMERALD_HOE = Services.REGISTRY_HELPER.registerItem("emerald_hoe", () -> new HoeItem(BetterMaterialsTiers.EMERALD, -2, -1.0F, (new Item.Properties())));
 
     public static final Supplier<Item> AMETHYST_SWORD = Services.REGISTRY_HELPER.registerItem("amethyst_sword", () -> new SwordItem(BetterMaterialsTiers.AMETHYST, 3, -2.4F, (new Item.Properties())));
     public static final Supplier<Item> AMETHYST_SHOVEL = Services.REGISTRY_HELPER.registerItem("amethyst_shovel", () -> new ShovelItem(BetterMaterialsTiers.AMETHYST, 1.5F, -3.0F, (new Item.Properties())));
-    public static final Supplier<Item> AMETHYST_PICKAXE = Services.REGISTRY_HELPER.registerItem("amethyst_pickaxe", () -> new ModPickaxeItem(BetterMaterialsTiers.AMETHYST, 1, -2.8F, BlockTags.NEEDS_DIAMOND_TOOL, (new Item.Properties())));
-    public static final Supplier<Item> AMETHYST_AXE = Services.REGISTRY_HELPER.registerItem("amethyst_axe", () -> new ModAxeItem(BetterMaterialsTiers.AMETHYST, 5.0F, -3.0F, BlockTags.NEEDS_DIAMOND_TOOL, (new Item.Properties())));
-    public static final Supplier<Item> AMETHYST_HOE = Services.REGISTRY_HELPER.registerItem("amethyst_hoe", () -> new ModHoeItem(BetterMaterialsTiers.AMETHYST, -3, 0.0F, BlockTags.NEEDS_DIAMOND_TOOL, (new Item.Properties())));
+    public static final Supplier<Item> AMETHYST_PICKAXE = Services.REGISTRY_HELPER.registerItem("amethyst_pickaxe", () -> new PickaxeItem(BetterMaterialsTiers.AMETHYST, 1, -2.8F, (new Item.Properties())));
+    public static final Supplier<Item> AMETHYST_AXE = Services.REGISTRY_HELPER.registerItem("amethyst_axe", () -> new net.minecraft.world.item.AxeItem(BetterMaterialsTiers.AMETHYST, 5.0F, -3.0F, (new Item.Properties())));
+    public static final Supplier<Item> AMETHYST_HOE = Services.REGISTRY_HELPER.registerItem("amethyst_hoe", () -> new HoeItem(BetterMaterialsTiers.AMETHYST, -3, 0.0F, (new Item.Properties())));
 
     public static final Supplier<Item> COPPER_HELMET = Services.REGISTRY_HELPER.registerItem("copper_helmet", () -> new ArmorItem(BetterMaterialsArmorMaterials.COPPER, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final Supplier<Item> COPPER_CHESTPLATE = Services.REGISTRY_HELPER.registerItem("copper_chestplate", () -> new ArmorItem(BetterMaterialsArmorMaterials.COPPER, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
