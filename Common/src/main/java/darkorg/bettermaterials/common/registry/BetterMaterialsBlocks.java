@@ -2,11 +2,11 @@ package darkorg.bettermaterials.common.registry;
 
 
 import darkorg.bettermaterials.common.BetterMaterials;
-import darkorg.bettermaterials.common.block.MaterialBlock;
 import darkorg.bettermaterials.common.platform.Services;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Supplier;
 
@@ -18,9 +18,13 @@ public abstract class BetterMaterialsBlocks {
         BetterMaterials.LOGGER.debug("Registering blocks for mod: " + BetterMaterials.MOD_ID);
 
         FLINT_BLOCK = registerBlock("flint_block",
-                MaterialBlock::new);
+                () -> {
+                    return new Block(BlockBehaviour.Properties.of().strength(5.0F, 6.0F).requiresCorrectToolForDrops());
+                });
         CHARCOAL_BLOCK = registerBlock("charcoal_block",
-                MaterialBlock::new);
+                () -> {
+                    return new Block(BlockBehaviour.Properties.of().strength(5.0F, 6.0F).requiresCorrectToolForDrops());
+                });
     }
 
     private static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block) {
