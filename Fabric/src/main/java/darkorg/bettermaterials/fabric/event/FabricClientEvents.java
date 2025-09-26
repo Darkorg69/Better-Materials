@@ -69,6 +69,7 @@ public abstract class FabricClientEvents {
             pFabricItemGroupEntries.addBefore(BetterMaterialsItems.COPPER_SHOVEL.get(), BetterMaterialsItems.FLINT_SHOVEL.get());
             pFabricItemGroupEntries.addBefore(BetterMaterialsItems.COPPER_AXE.get(), BetterMaterialsItems.FLINT_AXE.get());
             pFabricItemGroupEntries.addBefore(BetterMaterialsItems.COPPER_HOE.get(), BetterMaterialsItems.FLINT_HOE.get());
+            pFabricItemGroupEntries.addBefore(Items.SHEARS, BetterMaterialsItems.COPPER_SHEARS.get());
 
             //amethyst tools
             pFabricItemGroupEntries.addBefore(Items.DIAMOND_PICKAXE, BetterMaterialsItems.AMETHYST_PICKAXE.get());

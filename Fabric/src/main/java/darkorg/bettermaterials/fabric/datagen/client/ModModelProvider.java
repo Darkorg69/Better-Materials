@@ -42,5 +42,7 @@ public class ModModelProvider extends FabricModelProvider {
         pItemModelGenerators.generateFlatItem(BetterMaterialsItems.COPPER_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
         pItemModelGenerators.generateFlatItem(BetterMaterialsItems.EMERALD_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
         pItemModelGenerators.generateFlatItem(BetterMaterialsItems.AMETHYST_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
+
+        pItemModelGenerators.generateFlatItem(BetterMaterialsItems.COPPER_SHEARS.get(), ModelTemplates.FLAT_ITEM);
     }
 }

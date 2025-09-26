@@ -6,4 +6,3 @@ public abstract class BetterMaterialsRegistries {
         BetterMaterialsItems.init();
     }
 }
-
