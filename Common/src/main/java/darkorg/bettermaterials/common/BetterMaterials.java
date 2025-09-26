@@ -1,7 +1,6 @@
 package darkorg.bettermaterials.common;
 
 import darkorg.bettermaterials.common.platform.Services;
-import darkorg.bettermaterials.common.registry.ModReference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,8 +16,6 @@ public class BetterMaterials {
         );
         //Init mod registries
         Services.REGISTRY_HELPER.initRegistries();
-        //Init ModReference
-        ModReference.init();
         //Register mod event listeners
         Services.EVENT_HELPER.initListeners();
         //Register server-side packets...

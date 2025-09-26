@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#bettermaterials:storage_blocks/flint",
+    "#bettermaterials:storage_blocks/charcoal"
+  ]
+}

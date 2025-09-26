@@ -5,7 +5,10 @@ import darkorg.bettermaterials.common.registry.BetterMaterialsTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -19,6 +22,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BetterMaterialsTags.Blocks.STORAGE_BLOCKS_FLINT).add(BetterMaterialsBlocks.FLINT_BLOCK.get());
         getOrCreateTagBuilder(BetterMaterialsTags.Blocks.STORAGE_BLOCKS_CHARCOAL).add(BetterMaterialsBlocks.CHARCOAL_BLOCK.get());
         getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE).add(BetterMaterialsBlocks.FLINT_BLOCK.get()).add(BetterMaterialsBlocks.CHARCOAL_BLOCK.get());
-        //getOrCreateTagBuilder(BlockTags.STORAGE_BLOCKS).addTag(BetterMaterialsTags.Blocks.STORAGE_BLOCKS_FLINT).addTag(BetterMaterialsTags.Blocks.STORAGE_BLOCKS_CHARCOAL);
+        getOrCreateTagBuilder(TagKey.create(Registries.BLOCK, new ResourceLocation("forge", "storage_blocks"))).addTag(BetterMaterialsTags.Blocks.STORAGE_BLOCKS_FLINT).addTag(BetterMaterialsTags.Blocks.STORAGE_BLOCKS_CHARCOAL);
     }
 }

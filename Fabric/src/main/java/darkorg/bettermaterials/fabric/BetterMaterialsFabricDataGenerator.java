@@ -24,9 +24,7 @@ public class BetterMaterialsFabricDataGenerator implements DataGeneratorEntrypoi
         //Server data
         ModBlockLootTableProvider modBlockLootTableProvider = pack.addProvider(ModBlockLootTableProvider::new);
         ModBlockTagProvider modBlockTagProvider = pack.addProvider(ModBlockTagProvider::new);
-        pack.addProvider((fabricDataOutput, completableFuture) -> {
-            return new ModItemTagProvider(fabricDataOutput, completableFuture, modBlockTagProvider);
-        });
-        pack.addProvider(ModRecipeProvider::new);
+        ModItemTagProvider modItemTagProvider = pack.addProvider((pFabricDataOutput, pCompletableFuture) -> new ModItemTagProvider(pFabricDataOutput, pCompletableFuture, modBlockTagProvider));
+        ModRecipeProvider modRecipeProvider = pack.addProvider(ModRecipeProvider::new);
     }
 }

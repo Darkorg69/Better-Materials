@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "bettermaterials:copper_helmet",
+    "bettermaterials:copper_chestplate",
+    "bettermaterials:copper_leggings",
+    "bettermaterials:copper_boots",
+    "bettermaterials:emerald_helmet",
+    "bettermaterials:emerald_chestplate",
+    "bettermaterials:emerald_leggings",
+    "bettermaterials:emerald_boots",
+    "bettermaterials:amethyst_helmet",
+    "bettermaterials:amethyst_chestplate",
+    "bettermaterials:amethyst_leggings",
+    "bettermaterials:amethyst_boots"
+  ]
+}

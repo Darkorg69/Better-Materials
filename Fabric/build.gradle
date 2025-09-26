@@ -1,6 +1,4 @@
 plugins {
-    //id 'java'
-    //id 'idea'
     id 'fabric-loom' version '1.10-SNAPSHOT'
 }
 
@@ -43,9 +41,6 @@ dependencies {
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-fabric-api:${jei_version}")
     // at runtime, use the full JEI jar for Fabric
     modRuntimeOnly("mezz.jei:jei-${minecraft_version}-fabric:${jei_version}")
-
-    modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${fcap_version}"
-    modLocalRuntime "fuzs.forgeconfigscreens:forgeconfigscreens-fabric:${forge_config_screens_version}"
 
     modApi("com.terraformersmc:modmenu:7.2.2") {
         exclude(module: "fabric-api")

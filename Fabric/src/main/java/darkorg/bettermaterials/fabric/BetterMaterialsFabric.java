@@ -7,6 +7,5 @@ public class BetterMaterialsFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         BetterMaterials.init();
-        //ModLootTableModifiers.init();
     }
 }

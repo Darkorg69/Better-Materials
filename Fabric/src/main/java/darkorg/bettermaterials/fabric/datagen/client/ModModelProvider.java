@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.models.BlockModelGenerators;
 import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 
 import java.util.Arrays;
@@ -33,16 +34,18 @@ public class ModModelProvider extends FabricModelProvider {
             });
         }
 
+        pItemModelGenerators.generateFlatItem(BetterMaterialsItems.COPPER_SHEARS.get(), ModelTemplates.FLAT_ITEM);
+
         for (List<Supplier<Item>> pSuppliers : Arrays.asList(ModReference.COPPER_ARMOR, ModReference.EMERALD_ARMOR, ModReference.AMETHYST_ARMOR)) {
-            pSuppliers.forEach(pItemSupplier -> {
-                pItemModelGenerators.generateFlatItem(pItemSupplier.get(), ModelTemplates.FLAT_ITEM);
-            });
+            for (Supplier<Item> pItemSupplier : pSuppliers) {
+                if (pItemSupplier.get() instanceof ArmorItem pArmorItem) {
+                    pItemModelGenerators.generateArmorTrims(pArmorItem);
+                }
+            }
         }
 
         pItemModelGenerators.generateFlatItem(BetterMaterialsItems.COPPER_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
         pItemModelGenerators.generateFlatItem(BetterMaterialsItems.EMERALD_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
         pItemModelGenerators.generateFlatItem(BetterMaterialsItems.AMETHYST_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
-
-        pItemModelGenerators.generateFlatItem(BetterMaterialsItems.COPPER_SHEARS.get(), ModelTemplates.FLAT_ITEM);
     }
 }
