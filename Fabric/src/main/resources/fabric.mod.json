@@ -3,7 +3,7 @@
   "id": "${mod_id}",
   "version": "${mod_version}",
   "name": "${mod_name}",
-  "description": "${description}",
+  "description": "${mod_description}",
   "authors": [
     "${authors}"
   ],

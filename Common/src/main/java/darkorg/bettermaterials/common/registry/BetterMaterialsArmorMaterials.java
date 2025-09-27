@@ -15,26 +15,26 @@ import java.util.EnumMap;
 import java.util.function.Supplier;
 
 public enum BetterMaterialsArmorMaterials implements StringRepresentable, ArmorMaterial {
-    COPPER("copper", 12, Util.make(new EnumMap<>(ArmorItem.Type.class), (pEnumMap) -> {
+    COPPER("copper", 10, Util.make(new EnumMap<>(ArmorItem.Type.class), (pEnumMap) -> {
+        pEnumMap.put(ArmorItem.Type.BOOTS, 1);
+        pEnumMap.put(ArmorItem.Type.LEGGINGS, 4);
+        pEnumMap.put(ArmorItem.Type.CHESTPLATE, 5);
+        pEnumMap.put(ArmorItem.Type.HELMET, 1);
+    }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(Items.COPPER_INGOT)),
+
+    EMERALD("emerald", 20, Util.make(new EnumMap<>(ArmorItem.Type.class), (pEnumMap) -> {
         pEnumMap.put(ArmorItem.Type.BOOTS, 2);
         pEnumMap.put(ArmorItem.Type.LEGGINGS, 5);
         pEnumMap.put(ArmorItem.Type.CHESTPLATE, 6);
         pEnumMap.put(ArmorItem.Type.HELMET, 2);
-    }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(Items.COPPER_INGOT)),
+    }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.5F, 0.0F, () -> Ingredient.of(Items.EMERALD)),
 
-    EMERALD("emerald", 21, Util.make(new EnumMap<>(ArmorItem.Type.class), (pEnumMap) -> {
+    AMETHYST("amethyst", 25, Util.make(new EnumMap<>(ArmorItem.Type.class), (pEnumMap) -> {
         pEnumMap.put(ArmorItem.Type.BOOTS, 3);
         pEnumMap.put(ArmorItem.Type.LEGGINGS, 6);
-        pEnumMap.put(ArmorItem.Type.CHESTPLATE, 8);
-        pEnumMap.put(ArmorItem.Type.HELMET, 3);
-    }), 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, 0.0F, () -> Ingredient.of(Items.EMERALD)),
-
-    AMETHYST("amethyst", 28, Util.make(new EnumMap<>(ArmorItem.Type.class), (pEnumMap) -> {
-        pEnumMap.put(ArmorItem.Type.BOOTS, 3);
-        pEnumMap.put(ArmorItem.Type.LEGGINGS, 6);
-        pEnumMap.put(ArmorItem.Type.CHESTPLATE, 8);
-        pEnumMap.put(ArmorItem.Type.HELMET, 3);
-    }), 20, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, 0.0F, () -> Ingredient.of(Items.AMETHYST_SHARD));
+        pEnumMap.put(ArmorItem.Type.CHESTPLATE, 7);
+        pEnumMap.put(ArmorItem.Type.HELMET, 2);
+    }), 20, SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, 0.0F, () -> Ingredient.of(Items.AMETHYST_SHARD));
 
     public static final EnumCodec<BetterMaterialsArmorMaterials> CODEC = StringRepresentable.fromEnum(BetterMaterialsArmorMaterials::values);
 

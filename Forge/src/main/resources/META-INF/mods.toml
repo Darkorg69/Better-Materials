@@ -12,7 +12,7 @@ displayURL = "${displayURL}"
 logoFile = "${mod_id}.png"
 credits = "${credits}"
 authors = "${authors}"
-description = '''${description}'''
+description = '''${mod_description}'''
 
 [[mixins]]
 config = "${mod_id}.common.mixins.json"

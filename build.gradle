@@ -57,7 +57,7 @@ subprojects {
                           "authors"                   : authors,
                           "license"                   : license,
                           "credits"                   : credits,
-                          "description"               : description,
+                          "mod_description"               : mod_description,
                           "displayURL"                : displayURL,
                           "issueTrackerURL"           : issueTrackerURL,
                           "updateJSONURL"             : updateJSONURL,
