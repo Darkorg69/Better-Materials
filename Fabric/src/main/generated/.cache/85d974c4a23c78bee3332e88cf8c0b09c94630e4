@@ -1,5 +1,5 @@
-// 1.20.1	2025-09-27T02:18:16.7215531	Better Materials/Tags for minecraft:block
-b1138e4c502cb2ee6e5e22a077d13c227ec6f8fd data\minecraft\tags\blocks\mineable\pickaxe.json
+// 1.20.1	2026-06-29T02:44:31.4295323	Better Materials/Tags for minecraft:block
+6a2342a42cccc2b4d245cac5d694dee5853a0fcf data\forge\tags\blocks\storage_blocks.json
 ad62d29d3d97b4cb49429cd4aac37bf4688edc9f data\bettermaterials\tags\blocks\storage_blocks\flint.json
 38c64238c937c492904e62366d321c9a69d496b2 data\bettermaterials\tags\blocks\storage_blocks\charcoal.json
-6a2342a42cccc2b4d245cac5d694dee5853a0fcf data\forge\tags\blocks\storage_blocks.json
+b1138e4c502cb2ee6e5e22a077d13c227ec6f8fd data\minecraft\tags\blocks\mineable\pickaxe.json

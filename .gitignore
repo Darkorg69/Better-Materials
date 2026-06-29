@@ -22,3 +22,6 @@ build
 eclipse
 run
 runs
+
+# Fabric API extracted jars (loaded by Loom, not by us)
+META-INF/

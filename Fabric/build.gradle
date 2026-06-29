@@ -22,6 +22,7 @@ repositories {
 }
 
 dependencies {
+    implementation project(':Common')
     minecraft "com.mojang:minecraft:${minecraft_version}"
 
     //mappings loom.officialMojangMappings()
@@ -35,7 +36,10 @@ dependencies {
 
     //implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
 
-    compileOnly project(':Common')
+    // Common source is compiled by Loom via the source() directive below;
+    // do NOT use compileOnly project(':Common') here as it triggers processIncludeJars
+    // which copies vanilla-compiled Common classes into the jar, causing class loading issues in production.
+
     // compile against the JEI API but do not include it at runtime
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     modCompileOnlyApi("mezz.jei:jei-${minecraft_version}-fabric-api:${jei_version}")
